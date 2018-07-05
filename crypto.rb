@@ -15,7 +15,7 @@ def association(arr1, arr2) #function Nico Hermet
 
 		0.step(arr1.length-1,1) do |i|
 
-			mon_hashich[arr1[i]] = arr2[i].chomp("$")
+			mon_hashich[arr1[i]] = arr2[i].match(/\d+.\d+/)[0].to_f
 
 		end
 
@@ -30,17 +30,18 @@ puts hash_crypto
 
 
 puts     "Donne moi la crypto qui a la plus grosse valeur"
-#bigger = Hash.new
-#i=0
-#while i<hash_crypto.length
-#	if hash_crypto.value[i]>bigger
-		#bigger = hash_crypto[i]
-	#end
-	#i+=1
-#end
-puts hash_crypto.max_by
-
+def value_max (hash_crypto) 
+	max = hash_crypto.values.max
+	puts max
+end
+value_max(hash_crypto)
 puts     "Donne moi la crypto qui a la plus petite valeur"
+def value_min (hash_crypto) 
+	min = hash_crypto.values.min
+	puts min
+end
+value_min(hash_crypto)
 puts     "Combien de crypto contiennent le mot coin ?"
+
 puts     "Sors moi tout les devises, dont le cours est inférieur à 6000."
 puts     "Quel est le cours le plus haut parmi celle-la ?"
