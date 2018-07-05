@@ -4,13 +4,25 @@ twitter = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@
     puts twitter.length #inspect the size of the array
     puts " Combien d'handle contiennent un numéro ?"
 	num = Array.new #create a new array for the twitter that have numbers
-	num = twitter.grep(/\d+/) #find the twitters at the array twitter, the  
-	puts num.length
+	num = twitter.grep(/\d+/) #find the twitters at the array twitter, the \d is to serch the digits at a string
+	puts num.length #inspect the size of the array
     puts " Combien de Aude ?"
     aude = Array.new
-	aude = twitter.grep(/aude/im)
-	puts aude.length
-    puts " Combien commencent par une majuscule ?"
+	aude = twitter.grep(/aude/im) #find the twitters with aude, Aude, aUde, the im is to search does't matther the case
+	puts aude.length #inspect the size of the array
+    #puts " Combien commencent par une majuscule ?"
+    #upcase_int = Array.new
+	#upcase_init = twitter.grep(/[^:upper]/) #find the twitters with aude, Aude, aUde, the im is to search does't matther the case
+	#puts upcase_init #inspect the size of the array
     puts " Combien contiennent une majuscule ?"
+    upcase = Array.new
+	upcase = twitter.grep(/[:upper]/) #find the twitters with upper
+	puts upcase.length #inspect the size of the array
     puts " Combien de _ dans tous les pseudos confondus ?"
+    under = Array.new
+	under = twitter.grep(/[_]/) #find the twitters with _
+	puts under.length #inspect the size of the array
     puts " Trie la liste de handle par ordre alphabétique"
+    alpha = Array.new
+	alpha = twitter.sort #orden alphabetique
+	puts alpha #inspect the size of the array
