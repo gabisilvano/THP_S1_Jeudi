@@ -10,10 +10,10 @@ twitter = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@
     aude = Array.new
 	aude = twitter.grep(/aude/im) #find the twitters with aude, Aude, aUde, the im is to search does't matther the case
 	puts aude.length #inspect the size of the array
-    #puts " Combien commencent par une majuscule ?"
-    #upcase_int = Array.new
-	#upcase_init = twitter.grep(/[^:upper]/) #find the twitters with aude, Aude, aUde, the im is to search does't matther the case
-	#puts upcase_init #inspect the size of the array
+    puts " Combien commencent par une majuscule ?"
+    upcase_int = Array.new
+	upcase_init = twitter.grep(/[^:upper]/) #find the twitters with aude, Aude, aUde, the im is to search does't matther the case
+	puts upcase_init #inspect the size of the array
     puts " Combien contiennent une majuscule ?"
     upcase = Array.new
 	upcase = twitter.grep(/[:upper]/) #find the twitters with upper
